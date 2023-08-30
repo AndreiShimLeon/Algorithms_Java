@@ -6,6 +6,8 @@ package org.example;//
 import java.lang.reflect.Type;
 import java.util.Date;
 
+import static org.example.HeapSort.PyramidSort;
+
 public class Main {
 
     public static void Test(){
@@ -19,7 +21,7 @@ public class Main {
             arr2[i] = number;
         }
         Date start = new Date();
-        ShakeSort(arr1);
+        PyramidSort(arr1);
         Date end = new Date();
         long ShakeSortTime = end.getTime() - start.getTime();
         start = new Date();
@@ -199,6 +201,8 @@ public class Main {
             return BSearch(array, value, mid+1,right);
         }
     }
+
+
     public static void PrintArray(int[] array){
         for(int i = 0; i < array.length; i++){
             System.out.print(array[i]+" ");
@@ -214,11 +218,12 @@ public class Main {
 ////        InsertionSort(numbers);
 ////        SelectionSort(numbers);
 ////        QuickSort(numbers);
-        MergeSort(numbers);
+//        MergeSort(numbers);
+        PyramidSort(numbers);
         System.out.println("Sorted array: ");
         PrintArray(numbers);
 
 //        Test();
-        System.out.println(BinarySearch(numbers, 5));
+//        System.out.println(BinarySearch(numbers, 5));
     }
 }
